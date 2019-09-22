@@ -323,6 +323,19 @@ plt.xlabel('max_depth')
 plt.savefig('creditcards.decisiontreesboost.max_depth.png')
 # https://medium.com/@mohtedibf/indepth-parameter-tuning-for-decision-tree-6753118a03c3
 
+
+clf = AdaBoostClassifier(
+    tree.DecisionTreeClassifier(
+        random_state=0,
+        criterion='entropy',
+        splitter='random',
+        max_depth=7,
+        min_samples_split=30,
+    ),
+    random_state=0,
+    n_estimators=1,
+)
+
 plt = plot_learning_curve(
     clf, 'Credit Cards Boosting Learning Curve', X_train, y_train, None, 10)
 plt.savefig('creditcards.decisiontreesboost.learningcurve.png')
