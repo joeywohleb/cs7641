@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 from matplotlib.legend_handler import HandlerLine2D
-import seaborn as sns
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split, GridSearchCV, KFold, learning_curve
 import csv
