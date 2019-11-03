@@ -295,7 +295,7 @@ spl.set_xlabel('Number of components')
 spl.legend([b[0] for b in bars], cv_types)
 plt.savefig('charts/expectation-max.lda.creditcards.png')
 
-results = clf.predict(X_train)
+results = clf.predict(results)
 
 uniqueValues, occurCount = np.unique(results, return_counts=True)
 
