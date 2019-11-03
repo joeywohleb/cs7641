@@ -242,7 +242,7 @@ visualizer = KElbowVisualizer(model, k=(1, 20))
 
 visualizer.fit(results)        # Fit the data to the visualizer
 # Finalize and render the figure
-visualizer.show(outpath="charts/income.k-means.PCA.KElbowVisualizer.png")
+visualizer.show(outpath="charts/income.k-means.randomization.KElbowVisualizer.png")
 visualizer.poof()
 
 model = KMeans(
@@ -255,7 +255,7 @@ visualizer = InterclusterDistance(model)
 visualizer.fit(results)        # Fit the data to the visualizer
 # Finalize and render the figure
 visualizer.show(
-    outpath="charts/income.k-means.PCA.InterclusterDistance.png")
+    outpath="charts/income.k-means.randomization.InterclusterDistance.png")
 visualizer.poof()
 
 model = KMeans(
@@ -267,7 +267,7 @@ visualizer = SilhouetteVisualizer(model)
 visualizer.fit(results)       # Fit the data to the visualizer
 # Finalize and render the figure
 visualizer.show(
-    outpath="charts/income.k-means.PCA.SilhouetteVisualizer.png")
+    outpath="charts/income.k-means.randomization.SilhouetteVisualizer.png")
 
 lowest_bic = np.infty
 bic = []
